@@ -1,0 +1,20 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Mar 28 00:09:20 2020
+
+Overflow Error
+
+@author: David
+"""
+
+# the code prints subsequent
+# values of exp(k), k = 1, 2, 4, 8, 16, ...
+
+from math import exp
+ex = 1
+try:
+    while True:
+        print(exp(ex))
+        ex = ex * 2
+except OverflowError:
+    print('The number is too big.')
